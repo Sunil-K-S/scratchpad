@@ -14,7 +14,7 @@
  *   For n elements, there are 2^n subsets = masks 0 .. (1<<n)-1.
  *   For mask m: if bit j is set (m & (1<<j)) → include nums[j].
  *
- *   Example: nums=[a,b,c], mask=0b101=5 → include indices 0 and 2 → {a,c}
+ *   STEP-BY-STEP TRACE: nums=[a,b,c], mask=0b101=5 → include indices 0 and 2 → {a,c}
  *
  *   mask=0b000=0 → {} (empty set)
  *   mask=0b001=1 → {a}

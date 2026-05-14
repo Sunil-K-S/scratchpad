@@ -20,7 +20,7 @@
  *   Base case: open == n && close == n → complete string, record it.
  *
  * ─────────────────────────────────────────────────────────────────────────────
- * DECISION TREE for n=2
+ * STEP-BY-STEP TRACE — decision tree for n=2
  * ─────────────────────────────────────────────────────────────────────────────
  *   open=0,close=0: only '(' possible
  *   "("  open=1,close=0: '(' or ')'

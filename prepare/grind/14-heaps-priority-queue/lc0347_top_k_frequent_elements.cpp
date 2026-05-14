@@ -37,6 +37,16 @@
  * CORNER CASES:
  *   k == number of distinct elements → return all distinct elements
  *   All elements same frequency → any k of them
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (nums = [1,1,1,2,2,3], k = 2) — Approach 2: buckets
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Count freq: {1→3, 2→2, 3→1}. Buckets[i] = values with freq i.
+ *     bucket[1]={3}, bucket[2]={2}, bucket[3]={1}
+ *   Collect k items from highest freq downward: take {1}, then take {2} → [1,2] ✓
+ *
+ *   Same data with min-heap of size k on (freq, value): heap ends up holding
+ *   the two smallest frequency counts among candidates — analogous to LC 215.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

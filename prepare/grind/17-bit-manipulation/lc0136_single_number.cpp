@@ -19,7 +19,8 @@
  *   - XOR is commutative and associative
  *
  *   XOR all elements: pairs cancel out to 0, single remains.
- *   [4,1,2,1,2] → 4^1^2^1^2 = 4^(1^1)^(2^2) = 4^0^0 = 4
+ *   STEP-BY-STEP TRACE on [4,1,2,1,2] (associative XOR):
+ *   4^1^2^1^2 = 4 ^ (1^1) ^ (2^2) = 4 ^ 0 ^ 0 = 4 ✓
  *
  * ─────────────────────────────────────────────────────────────────────────────
  * COMPLEXITY

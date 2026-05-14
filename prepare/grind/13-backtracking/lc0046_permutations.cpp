@@ -18,7 +18,7 @@
  *   This avoids needing a separate `used` array — the "unused" elements are
  *   always in positions [pos..n-1] of the current array.
  *
- *   DECISION TREE for [1,2,3] (showing position 0 choices):
+ *   STEP-BY-STEP TRACE — decision tree for [1,2,3] (position 0 choices):
  *   pos=0: choose 1 → [1, 2,3]: recurse pos=1
  *          choose 2 → [2, 1,3]: recurse pos=1
  *          choose 3 → [3, 2,1]: recurse pos=1

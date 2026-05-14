@@ -20,7 +20,7 @@
  *   dp[i] = 1 + max(dp[j]) for all j < i where nums[j] < nums[i].
  *   Answer = max(dp[i]) for all i.
  *
- *   TRACE ([10,9,2,5,3,7,101,18]):
+ *   STEP-BY-STEP TRACE — DP table ([10,9,2,5,3,7,101,18]):
  *   dp = [1, 1, 1, 2, 2, 3, 4, 4]
  *   dp[3]=2 (5 extends 2), dp[4]=2 (3 extends 2), dp[5]=3 (7 extends 2,5 or 2,3)
  *   dp[6]=4 (101 extends any), dp[7]=4 (18 extends 2,3,7 or 2,5,7)
@@ -39,7 +39,7 @@
  *   tails is always sorted, so binary search applies.
  *   tails.size() = length of LIS.
  *
- *   TRACE ([10,9,2,5,3,7,101,18]):
+ *   STEP-BY-STEP TRACE — patience / tails ([10,9,2,5,3,7,101,18]):
  *   10 → tails=[10]
  *    9 → replace 10 with 9: tails=[9]
  *    2 → replace 9 with 2: tails=[2]

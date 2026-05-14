@@ -26,6 +26,17 @@
  *   - nums.size() == 1 -> false (no pair)
  *   - Two elements equal -> true
  *   - Large positives/negatives -> fine as set keys
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * WORKED EXAMPLE  (nums = [1, 2, 3, 1])
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   seen = {}
+ *   1: not in seen → insert. seen = {1}
+ *   2: not in seen → insert. seen = {1,2}
+ *   3: not in seen → insert. seen = {1,2,3}
+ *   1: already in seen → return true ✓ (duplicate exists)
+ *
+ *   nums = [1, 2, 3, 4]: scan all, never see duplicate → return false.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

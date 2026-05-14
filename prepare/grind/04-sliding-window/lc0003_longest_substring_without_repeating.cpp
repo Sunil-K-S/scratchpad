@@ -29,6 +29,21 @@
  *   - All same char -> 1
  *   - Answer at end of string (update max after each step)
  *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (s = "abcabcbb")
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   last[] stores last index of each char; L = window start; best = max length.
+ *
+ *   R=0 'a': last['a']=-1 < L → no jump. last['a']=0. window [0,0] len=1, best=1
+ *   R=1 'b': last['b']=-1 < L. last['b']=1. [0,1] len=2, best=2
+ *   R=2 'c': last['c']=-1 < L. last['c']=2. [0,2] len=3, best=3  → substring "abc"
+ *   R=3 'a': last['a']=0 >= L → duplicate! L = 0+1 = 1. last['a']=3. [1,3] len=3, best=3
+ *   R=4 'b': last['b']=1 >= L → L = 2. last['b']=4. [2,4] len=3, best=3
+ *   R=5 'c': last['c']=2 >= L → L = 3. last['c']=5. [3,5] len=3, best=3
+ *   R=6 'b': last['b']=4 >= L → L = 5. last['b']=6. [5,6] len=2, best=3
+ *   R=7 'b': last['b']=6 >= L → L = 7. last['b']=7. [7,7] len=1, best=3
+ *   Answer: 3  (longest without repeat is "abc")
+ *
  * ALTERNATIVE:
  *   Use unordered_set + while loop to shrink from L (same complexity, more moving parts).
 

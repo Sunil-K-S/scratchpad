@@ -2,6 +2,11 @@
  * Topic: Common Big-O patterns (reference, not a LeetCode problem)
  *
  * Use this file while revising: read each block and say the complexity out loud.
+ *
+ * WORKED EXAMPLES (tie size n to “can I use O(n²)?” in interviews)
+ *   n = 1e3   → n² = 1e6  steps (usually OK)
+ *   n = 1e5   → n² = 1e10 (too slow; need ≈ O(n) or O(n log n))
+ *   halving:   1e9 → 5e8 → … → 0 in ~30 iterations = O(log 1e9)
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

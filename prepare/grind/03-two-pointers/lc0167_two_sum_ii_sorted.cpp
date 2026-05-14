@@ -33,6 +33,17 @@
  * CONTRAST with LC 1 (unsorted):
  *   Sorting would be O(n log n) and destroys original indices — so hash map
  *   is better for LC 1; two pointers shine when sorted or when sorting is free.
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * WORKED EXAMPLE  (1-based indices in answer; here we use 0-based in trace)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   numbers = [2, 7, 11, 15], target = 9
+ *   L=0, R=3: sum = 2+15 = 17 > 9  → move R left: R=2
+ *   L=0, R=2: sum = 2+11 = 13 > 9  → R=1
+ *   L=0, R=1: sum = 2+7  = 9  == 9 → return (L+1, R+1) = (1, 2) in problem's 1-based ✓
+ *
+ *   Smaller sum case: [1, 2, 3, 4], target = 6
+ *   L=0,R=3 sum=1+4=5<6 → need larger sum → L++ ... until L=1,R=3 gives 2+4=6.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

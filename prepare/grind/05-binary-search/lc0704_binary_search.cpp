@@ -28,6 +28,18 @@
  * VARIANTS TO MENTION IN INTERVIEW:
  *   - First/last occurrence with duplicates -> move lo/hi asymmetrically
  *   - lower_bound / upper_bound style (see LC 35)
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (nums = [-1,0,3,5,9,12], target = 9)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   lo=0 hi=5  mid=2 nums[2]=3 < 9  → discard left half: lo=3
+ *   lo=3 hi=5  mid=4 nums[4]=9 == 9 → return 4 ✓
+ *
+ *   Same array, target = 2 (missing):
+ *   lo=0 hi=5 mid=2 nums[2]=3 > 2  → hi=1
+ *   lo=0 hi=1 mid=0 nums[0]=-1 < 2 → lo=1
+ *   lo=1 hi=1 mid=1 nums[1]=0 < 2  → lo=2
+ *   lo > hi → return -1
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

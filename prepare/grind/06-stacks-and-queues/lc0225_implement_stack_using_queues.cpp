@@ -19,7 +19,7 @@
  *   - pop()/top(): just dequeue from front — the most recently pushed element
  *     is always at the front.
  *
- *   WHY ROTATION WORKS:
+ *   STEP-BY-STEP TRACE — WHY ROTATION WORKS:
  *   After push(1): q=[1]. Rotate 0 times. Front=1.
  *   After push(2): enqueue 2 → q=[1,2]. Rotate 1 time: move 1 to back → q=[2,1]. Front=2.
  *   After push(3): enqueue 3 → q=[2,1,3]. Rotate 2 times: move 2→back, move 1→back → q=[3,2,1]. Front=3.

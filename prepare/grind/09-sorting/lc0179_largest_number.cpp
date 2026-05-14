@@ -17,6 +17,7 @@
  *   Compare the string a+b vs b+a (concatenation).
  *   If "a+b" > "b+a" lexicographically (as numbers), put a before b.
  *
+ *   STEP-BY-STEP TRACE (pairwise rule):
  *   Example: a=9, b=34 → "934" vs "349" → 934 > 349 → 9 first.
  *   Example: a=3, b=30 → "330" vs "303" → 330 > 303 → 3 first.
  *

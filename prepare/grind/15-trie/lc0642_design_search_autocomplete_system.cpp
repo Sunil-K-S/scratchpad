@@ -26,6 +26,10 @@
  *     input('a')  → []
  *     input('#')  → []   (saves "i a", count=1)
  *
+ *   WORKED EXAMPLE — why input(' ') after "i" filters sentences:
+ *   Prefix "i " matches only sentences starting with those two chars ("i love you",
+ *   "i love leetcode"); "island" is dropped because second char is 's', not space.
+ *
  * ─────────────────────────────────────────────────────────────────────────────
  * KEY INSIGHT: HashMap for O(1) updates + scan on each input character
  * ─────────────────────────────────────────────────────────────────────────────

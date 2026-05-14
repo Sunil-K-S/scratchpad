@@ -38,6 +38,17 @@
  *   TIME:  O(N * K * α(N*K) + N*K log(K)) where N=accounts, K=avg emails
  *          α is inverse Ackermann ≈ constant. Sort per group dominates.
  *   SPACE: O(N * K) — for parent map and output
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * WORKED EXAMPLE (tiny)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   accounts:
+ *     A0: [John, a@x.com, b@x.com]
+ *     A1: [John, b@x.com, c@x.com]
+ *     A2: [John, d@x.com]
+ *   Emails b@x.com link A0 and A1 → union(a,b), union(b,c) → {a,b,c} one set.
+ *   d@x.com only in A2 → separate component {d}.
+ *   Output two merged rows: emails [a,b,c] sorted + [d] sorted, each prefixed "John".
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

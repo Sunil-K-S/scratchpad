@@ -31,6 +31,19 @@
  *   - Duplicate values: map stores latest index; earlier index may already be
  *     paired — but problem guarantees one valid pair; typical tests still pass
  *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * WORKED EXAMPLE  (nums = [2, 7, 11, 15], target = 9)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Map stores value → index for elements already scanned.
+ *
+ *   i=0, nums[0]=2: need = 9-2 = 7. Map has no 7. Insert map[2]=0.   map={2→0}
+ *   i=1, nums[1]=7: need = 9-7 = 2. Map has 2 at index 0. Return [0,1].
+ *   Check: nums[0]+nums[1]=2+7=9 ✓
+ *
+ *   Second example: nums = [3, 3], target = 6
+ *   i=0: need=3, not in map. map[3]=0.
+ *   i=1: need=3, found at 0. Return [0,1].
+ *
  * NOTE FOR LEETCODE:
  *   Remove or rename main() before pasting; LeetCode provides its own driver.
 

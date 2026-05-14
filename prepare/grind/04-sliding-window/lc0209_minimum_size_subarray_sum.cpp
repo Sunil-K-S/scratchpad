@@ -30,7 +30,23 @@
  *   - Entire array needed
  *   - Single element equals target
  *   - No subarray works -> 0
-
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (target = 7, nums = [2, 3, 1, 2, 4, 3])
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   After each R, extend sum; while sum >= 7, update best length = R-L+1, then
+ *   sum -= nums[L], L++.
+ *
+ *   R=0 sum=2        (<7)
+ *   R=1 sum=5        (<7)
+ *   R=2 sum=6        (<7)
+ *   R=3 sum=8        → win [0..3] len 4, best=4 → shrink: sum=6, L=1
+ *   R=4 sum=10       → win [1..4] len 4 → shrink: sum=7, L=2 → still >=7
+ *                    → win [2..4] len 3, best=3 → shrink: sum=6, L=3
+ *   R=5 sum=6+3=9    → win [3..5] len 3 → shrink: sum=7, L=4 → win [4..5] len 2, best=2
+ *                    → shrink: sum=3, L=5 → sum < 7, stop inner loop
+ *   Answer: 2  (subarray [4, 3])
+ *
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS
  * ─────────────────────────────────────────────────────────────────────────────

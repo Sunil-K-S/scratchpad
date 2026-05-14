@@ -17,7 +17,7 @@
  *   For each choice of element i (i >= start), add nums[i] to current subset,
  *   recurse from i+1, then remove nums[i] (backtrack).
  *
- *   DECISION TREE for [1,2,3]:
+ *   STEP-BY-STEP TRACE — decision tree for [1,2,3]:
  *   []
  *   ├── [1]
  *   │   ├── [1,2]

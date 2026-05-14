@@ -19,7 +19,7 @@
  *   Every entry records the minimum valid AT THAT POINT in history.
  *   When you pop an element, the previous minimum is automatically restored.
  *
- *   TRACE:
+ *   STEP-BY-STEP TRACE:
  *   push(5): stack=[(5,5)]           min=5
  *   push(3): stack=[(5,5),(3,3)]     min=3
  *   push(7): stack=[(5,5),(3,3),(7,3)] min=3  ← 7 is pushed but min stays 3

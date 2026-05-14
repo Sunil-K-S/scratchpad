@@ -24,6 +24,9 @@
  *   APPROACH 2: Partial sort (nth_element) — O(n) average
  *   Use std::partial_sort or nth_element on squared distance. Same idea as QuickSelect.
  *
+ *   WORKED EXAMPLE  (points = [[-2,2],[1,3]], k = 1)
+ *   d²(-2,2) = 4+4 = 8.  d²(1,3) = 1+9 = 10.  Smaller is 8 → return [[-2,2]].
+ *
  * ─────────────────────────────────────────────────────────────────────────────
  * COMPLEXITY
  * ─────────────────────────────────────────────────────────────────────────────

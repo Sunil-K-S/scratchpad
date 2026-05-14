@@ -23,6 +23,11 @@
  *
  *   Serialized: "1,2,#,#,3,4,#,#,5,#,#"
  *
+ *   STEP-BY-STEP TRACE (reading the string left-to-right for deserialize):
+ *   Token 1 → make root(1). Next 2 → left child of 1. Then #,# → left leaf done.
+ *   Token 3 → right child of 1. 4 → left of 3; #,# → 4 is leaf. 5 → right of 3;
+ *   #,# → done. Tree matches the picture above.
+ *
  *   WHY preorder works for unique reconstruction:
  *   We know the first value is root. We know where left subtree ends because
  *   nulls tell us when a subtree is exhausted.

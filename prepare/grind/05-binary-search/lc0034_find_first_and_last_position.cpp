@@ -24,6 +24,16 @@
  *   - empty nums -> {-1,-1}
  *   - all elements target -> [0, n-1]
  *   - single element
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * WORKED EXAMPLE  (nums = [5, 7, 7, 8, 8, 10], target = 8)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   lower_bound(8): first i with nums[i] >= 8 → i=3, nums[3]==8 ✓  → first = 3
+ *   upper_bound(8): first i with nums[i] > 8  → i=5 (value 10)
+ *   last position = upper_bound(8) - 1 = 4  (second 8)  → answer [3,4] ✓
+ *
+ *   target = 6 (not in array):
+ *   lower_bound(6) lands on first 7 at index 1, nums[1]!=6 → return [-1,-1]
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

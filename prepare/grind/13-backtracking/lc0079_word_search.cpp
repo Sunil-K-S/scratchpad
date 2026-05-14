@@ -35,6 +35,13 @@
  *   Word longer than grid cells → false
  *   Word is single character → check if it appears anywhere
  *   Word requires revisiting the starting cell → prevented by '#' marking
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (prefix of "ABCCED" on the LC example board)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Rows: ABCE / SFCS / ADEE — start at A(0,0) → B(0,1) → C(0,2) → second C(1,2)
+ *        → E(2,2) → D(2,1) (one valid path; DFS explores order may differ).
+ *   Visited cells are temporarily marked so the path never reuses a cell in one try.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

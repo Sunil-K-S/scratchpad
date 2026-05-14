@@ -36,6 +36,14 @@
  *   Duplicate words in input → deduplicate in trie (only report once)
  *   Word that is prefix of another → both can be found independently
  *   Board with no words matching → empty result
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE (one word: "oath" on the LC example board)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Trie paths follow o→a→t→h. One valid DFS (down then right path):
+ *     (0,0)'o' → (0,1)'a' → (1,1)'t' → (2,1)'h' → word complete, record "oath".
+ *   Another DFS from other cells explores "eat" similarly. Trie pruning skips
+ *   paths whose next letter is absent (e.g. no edge from trie node).
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

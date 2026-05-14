@@ -48,6 +48,16 @@
  *   Dijkstra = BFS + priority queue + non-negative weights.
  *   If negative weights: use Bellman-Ford (O(VE)).
  *   If all weights equal: plain BFS suffices (O(V+E)).
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (n=4, edges=[[2,1,1],[2,3,1],[3,4,1]], k=2)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Signal starts at node 2. Build adjacency: 2→(1,w1),(3,w1); 3→(4,w1).
+ *   dist[2]=0; push (0,2). Pop (0,2); relax 1: dist[1]=1; relax 3: dist[3]=1.
+ *   Pop (1,1) or (1,3) — eventually dist[4]=dist[3]+1=2. All reachable.
+ *   max(dist[1..4]) = 2  → answer 2 ✓
+ *
+ *   If we remove edge (3,4), node 4 stays INF → return -1.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

@@ -19,6 +19,7 @@
  *   Each TrieNode has 26 children (one per lowercase letter) and an `is_end` flag.
  *   Characters are stored implicitly as the INDEX into the children array.
  *
+ *   STEP-BY-STEP TRACE (same trie as INSERT / SEARCH / STARTS below):
  *   INSERT "apple": root→a→p→p→l→e.is_end=true
  *   SEARCH "apple": traverse root→a→p→p→l→e, return e.is_end
  *   SEARCH "app":   traverse root→a→p→p, return p.is_end (false, no word ends here)

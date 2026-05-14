@@ -10,11 +10,12 @@
  *    94 — Inorder:   left → root → right
  *   145 — Postorder: left → right → root
  *
- *   Tree:      1
- *             / \
- *            2   3
- *           / \
- *          4   5
+ *   STEP-BY-STEP TRACE on this tree:
+ *        1
+ *       / \
+ *      2   3
+ *     / \
+ *    4   5
  *
  *   Preorder:  [1, 2, 4, 5, 3]
  *   Inorder:   [4, 2, 5, 1, 3]   ← for BST, inorder = sorted order

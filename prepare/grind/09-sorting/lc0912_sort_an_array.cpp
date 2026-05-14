@@ -18,7 +18,7 @@
  *   Stable sort. Guaranteed O(n log n). Uses O(n) extra space.
  *   WHEN TO USE: When you need stable sort, or sorting linked lists (no random access).
  *
- *   MERGE step trace ([1,3] and [2,4]):
+ *   STEP-BY-STEP TRACE — MERGE step ([1,3] and [2,4]):
  *   Compare 1 vs 2 → take 1. Compare 3 vs 2 → take 2. Compare 3 vs 4 → take 3. Take 4.
  *   Result: [1,2,3,4]
  *

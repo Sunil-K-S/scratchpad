@@ -22,6 +22,18 @@
  *   - Extra closing first -> invalid immediately
  *   - Opener without closer at end -> stack non-empty
  *   - s length odd -> cannot be valid (quick check optional)
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (s = "()[]{}")
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   '('  → push ')'.  stack: )
+ *   ')'  → top is ')', pop. stack: empty
+ *   '['  → push ']'.  stack: ]
+ *   ']'  → top is ']', pop. stack: empty
+ *   '{'  → push '}'.  stack: }
+ *   '}'  → top is '}', pop. stack: empty → valid ✓
+ *
+ *   Invalid: "(]" after '(' push ')', see ']' != ')' → false.
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

@@ -43,6 +43,19 @@
  *   k=1 → maximum element
  *   k=n → minimum element
  *   Duplicates handled correctly by both approaches
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (Approach 1: min-heap of k largest), nums=[3,2,1,5,6,4], k=2
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Rule: heap holds at most k elems; smallest of those k is the “k-th largest cutoff”.
+ *
+ *   3 → heap {3}
+ *   2 → heap {2,3}
+ *   1 → heap full; 1 > top(2)? no → ignore
+ *   5 → pop 2, push 5 → {3,5}
+ *   6 → pop 3, push 6 → {5,6}
+ *   4 → 4 > top(5)? no → ignore
+ *   Answer = top() = 5 = 2nd largest ✓
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS

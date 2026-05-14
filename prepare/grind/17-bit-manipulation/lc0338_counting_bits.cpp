@@ -18,7 +18,7 @@
  *   WHY: i >> 1 shifts right by 1 (drops LSB), which is i/2.
  *   The bit count of i = bit count of i/2 + the dropped LSB (0 or 1).
  *
- *   TRACE:
+ *   STEP-BY-STEP TRACE:
  *   dp[0] = 0
  *   dp[1] = dp[0] + (1&1) = 0 + 1 = 1
  *   dp[2] = dp[1] + (2&1) = 1 + 0 = 1  (0b10 → shift → 0b1=1 bit, +0=1)

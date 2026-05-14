@@ -26,6 +26,19 @@
  *   - target less than nums[0] -> 0
  *   - target greater than all -> n
  *   - target equals some element -> that index
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * STEP-BY-STEP TRACE  (nums = [1, 3, 5, 6], target = 5)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *   Want first index i with nums[i] >= 5. Half-open binary search: lo=0, hi=4.
+ *   mid=2 nums[2]=5 >= 5 → hi=2
+ *   mid=1 nums[1]=3 < 5  → lo=2
+ *   lo==hi → return 2 ✓ (5 already there)
+ *
+ *   target = 2 (would insert between 1 and 3 → index 1):
+ *   ends with lo=1, insert position 1 ✓
+ *
+ *   target = 7 (larger than all): lo ends at n=4 ✓
 
  * ─────────────────────────────────────────────────────────────────────────────
  * REAL-WORLD APPLICATIONS
